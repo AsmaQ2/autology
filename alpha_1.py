@@ -1,7 +1,7 @@
 
 os.chdir(r"D:\un\diss\project")
 def queue_text(seq):
-    list_queue = list(range(1, x))
+    list_queue = list(range(1, x)) #изменить X на количество файлов в папке
     for i in list_queue:
         if seq == 1:
             for root, dirs, files in os.walk('D:/un/diss/project/comp_science'):
