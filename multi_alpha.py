@@ -248,7 +248,6 @@ import threading
 import os
 import time
 if __name__ == '__main__':
-    start_time = time.clock()
     p1 = threading.Thread(target = queue_text, args =(1, '' ) ) 
     p1.start()
     p2 = threading.Thread(target = queue_text, args =(2, '' ) ) 
