@@ -1,14 +1,13 @@
-
 os.chdir(r"D:\un\diss\project")
 def queue_text(seq):
-    list_queue = list(range(1, x)) #изменить X на количество файлов в папке
+    list_queue = list(range(1, x)) #изменить Y на количество файлов в папке
     for i in list_queue:
         if seq == 1:
             for root, dirs, files in os.walk('D:/un/diss/project/comp_science'):
                 for file in files:
                     doc = docx.Document(r"D:/un/diss/project/comp_science/"+file)
                     y = 0
-                    txt5 = ''
+                    txt5 = 'qqweqw'
                     for paragraph in doc.paragraphs:
                         for run in paragraph.runs:
                             txt = run.text
@@ -49,4 +48,3 @@ def queue_text(seq):
                                 instance_name = "'"+instance+"'"
                                 query1 = "MERGE(i:Instance{name:"+instance_name+"}) MATCH (t:Term{name:"+instance_receiver+"}) MERGE (i)-[:is_implementation]->(t)
                                 conn.query(query1, db='DB1')
-
